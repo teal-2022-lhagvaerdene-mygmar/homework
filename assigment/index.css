@@ -1,0 +1,25 @@
+input{
+    border-top: 0ch;
+    border-right: 0ch;
+    border-left: 0ch;
+    margin-top: 10px;
+}
+button{
+    border-radius: 50px;
+}
+h1{
+    color: blue;
+}
+h2{
+    color: aliceblue;
+}
+.addd input{
+    background-color: transparent;
+}
+.addd select{
+    background-color: transparent;
+    color: aliceblue;
+}
+.addd ::placeholder{
+    color: aliceblue;
+}

@@ -1,0 +1,51 @@
+.image img{
+    max-width:16vw;
+    height: auto;
+    border-radius: 20px;
+}
+@media only screen and (max-width:1300px){
+    .image img{
+        max-width: 33%;
+    }
+}
+@media only screen and (max-width:813px){
+    .image img {
+        max-width: 100%;
+    }
+}
+h1{
+    font-size: 5vw;
+}
+.image-1{
+    display: flex;
+    gap: 50px;
+}
+.image-1 img{
+    max-width: 30vw;
+    height: auto;
+    border-radius: 20px;
+}
+
+.image-2{
+    display: flex;
+    gap: 40px;
+    margin-top: 50px;
+}
+.para{
+    width: 15vw;
+    height: auto;
+    background: rgb(180, 176, 176);
+    padding: 20px;
+    border-radius: 20px;
+}
+@media only screen and (max-width:1300px) {
+    .image-2 {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    .para {
+        width: 95%;
+    }
+}
