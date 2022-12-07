@@ -93,3 +93,39 @@ function f18(m,c){
     console.log(m * Math.pow(c,2))
 }
 f18(2,300000)
+function my(p1,p2){
+    return p1 + p2
+}
+console.log(my(2,3))
+function even(num){
+    if(num % 2 == 0){
+        console.log('even')
+    }else{
+        console.log('odd')
+    }
+}
+even(10)
+function too(x,y){
+    let result = ""
+    if(x > y ){
+        result = x + " " + 'ih too'
+    }else(
+        result = y + " " + "ih too"
+    )
+    return result
+}
+console.log(too(9,9))
+
+
+function odoo(numa){
+    return numa + numa
+}
+console.log(odoo(3))
+let x = function(numa){
+    return numa + numa
+}
+console.log(x(5))
+let k = (numa) =>{
+    return numa + numa
+}
+console.log(k(11))

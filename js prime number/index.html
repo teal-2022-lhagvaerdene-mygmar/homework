@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-    <html>
-        <head>
-            <title></title>
-        </head>
-        <body>
-        
-            <script src="main.js"></script>
-        </body>
-    </html>
+ <script>
+    const too = Number(prompt('too oruulna uu'))
+    let output = false
+    if(too == 1){
+        console.log("it is not prime number");
+    }else if(too > 1){
+        for(let i = 2 ; i < too; i++){
+            if(too % i == 0){
+                output = true
+                break
+            }
+        }
+        if(output == true){
+            console.log(too, 'it is not prime number')
+        }else{
+            console.log( too , 'it is prime number')
+        }
+    }else{
+        console.log('it is not prime number')
+    }
+    
+ </script>
