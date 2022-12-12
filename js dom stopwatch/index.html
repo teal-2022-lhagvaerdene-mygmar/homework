@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div id="time">as</div>
+        <script>
+            let time1 = document.getElementById('time')
+            let date = new Date()
+            time1.innerHTML = date.getMinutes()+ ':' + date.getSeconds() + ':'+ date.getMilliseconds()
+        </script>
+    </body>
+</html>

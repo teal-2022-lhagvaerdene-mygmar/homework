@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form action="">
+            <select name="" id="colorSelect">
+                <option value="">red</option>
+                <option value="">green</option>
+                <option value="">white</option>
+                <option value="">black</option>
+            </select>
+            <input type="button" value="select and remove" id="input">
+        </form>
+        <script>
+            let inputEl = document.getElementById('input')
+            let niilber = 'No.of items:'
+            function removeclick (){
+                let selectEl = document.getElementById('colorSelect')
+                niilber = niilber + ' ' + selectEl.length
+                console.log(niilber)
+                for(let j = 0 ; j < selectEl.length ; j++){
+                    console.log(selectEl[j].text)
+                }
+                selectEl.remove()
+                
+            }
+            inputEl.addEventListener("click", removeclick)
+        </script>
+    </body>
+</html>
+result + =

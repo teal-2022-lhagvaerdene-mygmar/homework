@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <button type="button" id="mybutton">click the button</button>
+        <div class="color">
+            <p>click to set background color</p>
+        </div>
+        <div class="color">
+            <p>click to change another color</p>
+        </div>
+        <script>
+            let mybutton = document.getElementById('mybutton')
+            let colorchange = document.getElementsByClassName('color')
+            function changetehcolor (){
+                colorchange[0].style = "background-color : red"
+                colorchange[1].style = "background-color : yellow"
+            }
+            mybutton.addEventListener("click" , changetehcolor)
+        </script>
+    </body>
+</html>

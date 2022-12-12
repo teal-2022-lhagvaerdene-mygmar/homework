@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+
+        </title>
+    </head>
+    <body>
+        <ul id="aimagNames">
+
+            <li id="aimag-101">Архангай</li>
+        
+            <li id="aimag-202">Баян-Өлгий</li>
+        
+            <li id="aimag-103">Баянхонгор</li>
+        
+            <li id="aimag-104">Булган</li>
+        
+            <li id="aimag-205">Говь-Алтай</li>
+        
+            <li id="aimag-406">Говьсүмбэр</li>
+        
+            <li id="aimag-407">Дархан-Уул</li>
+        
+            <li id="aimag-408">Дорноговь</li>
+        
+            <li id="aimag-309">Дорнод</li>
+        
+            <li id="aimag-410">Дундговь</li>
+        
+            <li id="aimag-211">Завхан</li>
+        
+            <li id="aimag-112">Орхон</li>
+        
+            <li id="aimag-113">Өвөрхангай</li>
+        
+            <li id="aimag-414">Өмнөговь</li>
+        
+            <li id="aimag-315">Сүхбаатар</li>
+        
+            <li id="aimag-416">Сэлэнгэ</li>
+        
+            <li id="aimag-417">Төв</li>
+        
+            <li id="aimag-218">Увс</li>
+        
+            <li id="aimag-219">Ховд</li>
+        
+            <li id="aimag-120">Хөвсгөл</li>
+        
+            <li id="aimag-321">Хэнтий</li>
+        
+            <li id="aimag-522">Улаанбаатар</li>
+        
+          </ul>
+        
+
+
+        <script>
+            console.log(document.querySelectorAll('ul li')[0])
+            console.log(document.querySelectorAll('ul li')[21])
+            console.log(document.getElementById('aimag-315'))
+            let ulli = document.querySelectorAll('ul li')
+            let hangainbus 
+            for(let k = 0 ; k < ulli.length; k++){
+                ulli[k].style.color = 'red'
+                ulli[k].style.fontSize = "40px"
+                ulli[k].style.border = ' 2px solid black'
+                ulli[k].style.padding = '10px'
+                ulli[k].style.margin = '10px'
+                if(ulli[k].id[6] == 1){
+                    ulli[k].style.color = 'black'
+                }else if(ulli[k].id[6] == 2){
+                    ulli[k].style.color = 'aqua'
+                }else if(ulli[k].id[6] == 3){
+                    ulli[k].style.color = 'green'
+                }else if(ulli[k].id[6] == 4){
+                    ulli[k].style.color = 'blue'
+                }else{
+                    ulli[k].style.color = 'white'
+                    ulli[k].style.backgroundColor = 'black'
+                }
+
+            }
+            
+        </script>
+    </body>
+</html>

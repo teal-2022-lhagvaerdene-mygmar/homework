@@ -1,13 +1,12 @@
 <script>
-    const ug = "Lkhagva"
-    console.log(ug.toLowerCase());
+    let ug = prompt ("");
     let output = ''
-    output =  ug[0].toLowerCase();
-    let urt = ug.length
-    console.log(urt);
-    output += ug.substr(1, urt).toUpperCase();
-    console.log(output);
-    // for(let i = 0 ; i < ug.length; i++){ 
+    for(let k = 0 ; k < ug.length ; k++){
         
-    // }   
+        if (ug[k] == ug[k].toLowerCase()) { output += ug[k].toUpperCase();} // tom bolgoh uildel}
+        else { output += ug[k].toLowerCase();}// jijg bolgoj baina}
+    }
+    console.log (output);
+
 </script>
+
