@@ -18,16 +18,18 @@
             let niilber = 'No.of items:'
             function removeclick (){
                 let selectEl = document.getElementById('colorSelect')
+                let hevleh = ''
                 niilber = niilber + ' ' + selectEl.length
-                console.log(niilber)
                 for(let j = 0 ; j < selectEl.length ; j++){
-                    console.log(selectEl[j].text)
+                    hevleh += selectEl[j].text
+                    hevleh += "\n"
                 }
+                alert(niilber + "\n" + hevleh)
                 selectEl.remove()
+                
                 
             }
             inputEl.addEventListener("click", removeclick)
         </script>
     </body>
 </html>
-result + =

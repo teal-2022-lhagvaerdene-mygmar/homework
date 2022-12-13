@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="random()">Random color generator </button>
+        <script>
+            function random(){
+                let array =['#000000', "#FF0000" ,'#800000' , '#FFFF00' ,'#40E0D0' , '#CCCCFF' ,' #6495ED']
+                const randomColor = array[Math.floor(Math.random() * array.length)]
+                document.body.style.backgroundColor = randomColor
+                console.log(randomColor)
+            }
+        </script>
+    </body>
+</html>
