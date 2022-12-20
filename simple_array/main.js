@@ -6,5 +6,10 @@ for(let k = 0 ; k < 7 ; k++){
     console.log(itCompanies[k])
 }
 for(let i = 0 ; i < itCompanies.length ; i++){
-    console.log(itCompanies[i].toLocaleUpperCase)
+    console.log(itCompanies[i].toLocaleUpperCase())
 }
+let output = ''
+for(let j = 0 ; j < itCompanies.length ; j++){
+    output += itCompanies[j] + ' '
+}
+console.log(output)
