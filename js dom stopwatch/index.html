@@ -3,12 +3,57 @@
     <head>
         <title></title>
     </head>
+    <style>
+        .card{
+            text-align: center;
+        }
+        .time{
+            color: azure;
+        }
+    </style>
     <body>
-        <div id="time">as</div>
+        <div class="card">
+            <div class="time">
+                00 : 00 : 000
+            </div>
+            <div>
+                <button type="button" onclick="start()">start</button>
+                <button type="button" onclick="stop()">stop</button>
+                <button type="button" onclick="reset()">reset</button>
+            </div>
+        </div>
         <script>
-            let time1 = document.getElementById('time')
-            let date = new Date()
-            time1.innerHTML = date.getMinutes()+ ':' + date.getSeconds() + ':'+ date.getMilliseconds()
+            let cardEl = document.getElementsByClassName('card')
+            let time1 = document.querySelector('.time')
+            document.body.style.backgroundColor = 'purple'
+            let min = sec = millsec =  0
+            let int;
+            function start(){
+                if(int !== null){
+                    clearInterval(int)
+                }
+                int = setInterval(time,10)
+            }
+            function stop(){
+                clearInterval(int)
+            }
+            function reset(){
+                clearInterval(int)
+                min = sec = millsec = 0
+                time1.innerHTML = ' 00 : 00 : 000'
+            }
+            function time(){
+                millsec += 10
+                if(millsec == 1000){
+                    millsec = 0
+                    sec ++
+                }
+                if(sec == 60 ){
+                    sec = 0
+                    min++
+                }
+            }
+            
         </script>
     </body>
 </html>
