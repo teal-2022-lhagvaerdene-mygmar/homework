@@ -15,19 +15,18 @@
         </form>
         <script>
             let inputEl = document.getElementById('input')
-            let niilber = 'No.of items:'
             function removeclick (){
                 let selectEl = document.getElementById('colorSelect')
+                let optionEl = document.getElementsByTagName('option')
+                let niilber = 'No.of items:' + selectEl.length
                 let hevleh = ''
-                niilber = niilber + ' ' + selectEl.length
+                let length = selectEl.length
                 for(let j = 0 ; j < selectEl.length ; j++){
                     hevleh += selectEl[j].text
                     hevleh += "\n"
                 }
                 alert(niilber + "\n" + hevleh)
-                selectEl.remove()
-                
-                
+                optionEl[0].remove()
             }
             inputEl.addEventListener("click", removeclick)
         </script>
