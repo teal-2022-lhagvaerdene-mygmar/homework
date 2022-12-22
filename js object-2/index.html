@@ -1,0 +1,16 @@
+<script>
+    let animals = [
+        {type: "dog", sound: "woof" , printsound : printsoundEl()},
+        {type: "cow",sound: "moo", printsound : printsoundEl()},
+        {type: "cat",sound: "meow", printsound : printsoundEl()},
+        {type : 'horse' , sound : 'iinhhho' , printsound : printsoundEl()} , 
+        {type: 'sheep' , sound : 'maiiiii' , printsound : printsoundEl()} ] 
+    function printsoundEl(){
+        return function(){
+            console.log(this.type , 'makes a' ,this.sound , 'sound')
+        }
+    }
+    for(let i = 0 ; i < animals.length ; i++){
+        animals[i].printsound()
+    }
+</script>

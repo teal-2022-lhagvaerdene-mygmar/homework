@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <ol id="news">
+
+        </ol>
+     <h1>kjhlkjhkl</h1>
+        <script>
+            let news1 = document.getElementById('news')
+            fetch('https://jsonplaceholder.typicode.com/photos')
+            .then((res)=>{
+               return res.json()
+            })
+            .then((todo)=>{
+                for(let i = 0 ; i < todo.length ; i++){
+                    const singleTodo = document.createElement('img')
+                    singleTodo.src = todo[i].thumbnailUrl
+                    news1.append(singleTodo)
+                }
+            })
+        </script>
+    </body>
+</html>
