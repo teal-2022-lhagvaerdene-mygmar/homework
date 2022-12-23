@@ -1,17 +1,26 @@
 <script>
     let input = [4, 2, 34, 4, 1, 12, 1, 4]
-    let output = 0
     let arr = []
-    for(let j = 0 ; j <= input.length ; j++){
-        for(let i = j + 1  ; i < input.length ; i++ ){
-            if(input[j] == input[i] ){
-                output ++
-                console.log(input[j] , output)
+    for(let j = 0 ; j < input.length ; j++){
+        for(let i = j + 1  ; i < input.length  ; i++ ){
+            if(input[j] === input[i] ){    
+                let davhardsan = false;
+                for (let k = 0; k<arr.length; k++){
+                    if (input[j] === arr[k]){
+                            davhardsan = true;
+                    }
+                }
+
+                if (!davhardsan){
+                    arr.push( input[j])
+                }
+                
             }
-            output = 0
         }
     }
+
     console.log(arr)
+   
    
 
 </script>

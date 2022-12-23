@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Profile</title>
+        <style>
+            img{
+                border-radius: 70px;
+                position: relative;
+                bottom: 10px;
+                border: 4px solid white;
+            }
+            #pro{
+                position: absolute;
+                top: 100px;
+                left: 100px;
+                text-transform: uppercase;
+                text-align: center;
+                margin: 0% auto;
+                width: 400px;
+                background-color: rgb(74, 120, 245);
+                border-radius: 20px 20px 0 0 ;
+                color: white;
+                padding: 30px;
+            }
+            #text{
+                position: absolute;
+                padding: 30px;
+                top: 100px;
+                left: 100px;
+                text-align: start ;
+                margin: 0% auto;
+                top: 400px;
+                width: 400px;
+                background-color: rgb(115, 132, 132);
+                border-radius: 0px 0px 20px 20px ;
+                color: white
+
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div id="pro">
+               
+            </div>
+            <div id="text">
+    
+            </div>
+
+        </header>
+
+        <script>
+            let divEl = document.getElementById('pro')
+            let textEl = document.getElementById('text')
+            fetch('https://randomuser.me/api')
+            .then((res) =>{
+                if(res.ok){
+                    return res.json()
+                }
+            })
+            .then((profile) =>{
+                let picture = document.createElement('img')
+                picture.src = profile.results[0].picture.large
+                const name = document.createElement('h1')
+                name.innerHTML = profile.results[0].name.first
+                let email = document.createElement('div')
+                email.innerHTML = profile.results[0].email
+                let phone = document.createElement('p')
+                phone.innerHTML = profile.results[0].phone
+                divEl.append(picture)
+                divEl.append(name)
+                divEl.append(email)
+                divEl.append(phone)
+                let country = document.createElement('div')
+                country.innerHTML = 'Country'+ ' ; ' + profile.results[0].location.country.toUpperCase()
+                textEl.append(country)
+                let account = document.createElement('div')
+                account.innerHTML = 'Facebook account'
+                let birthday = document.createElement("div")
+                birthday.innerHTML = 'Birthday'+ ': ' + profile.results[0].dob.date.substr(0,10)
+                textEl.append(birthday)
+                textEl.append(account)
+            })
+            </script>
+    </body>
+</html>
