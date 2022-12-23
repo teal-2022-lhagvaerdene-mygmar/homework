@@ -1,0 +1,14 @@
+<script>
+    let removeArray = [2,1,5,6,8]
+    console.log(removeArray)
+    let input = Number(prompt('ustgah toogoo oruulna uu'))
+    function removed(){
+        for(let k = 0 ; k < removeArray.length ; k++){
+            if(input == removeArray[k]){
+                removeArray.splice(k , 1)
+            }
+        }
+        return removeArray        
+    }
+    console.log(removed())
+</script>

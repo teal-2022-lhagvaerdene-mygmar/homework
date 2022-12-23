@@ -1,0 +1,21 @@
+<script>
+    let input = String(prompt('too oruulna uu'))
+    let output = ''
+    function palindromic(){
+        for(let i = 0 ; i < input.length ; i++){
+            output += input[i] + ' '
+        }
+        let ou = output.split(' ')
+        ou.reverse()
+        let j =''
+        for(let i = 0 ; i < ou.length ; i++){
+            j += ou[i]
+        }
+        if(j == input){
+            return 'it is palindromic number'
+        }else{
+            return 'it is not palindromic number'
+        }
+    }
+    console.log(palindromic())
+</script>

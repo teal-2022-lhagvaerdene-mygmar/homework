@@ -1,0 +1,22 @@
+<script>
+    let input =  String(54361)
+    
+    // input.split('')
+    // input.reverse()
+    let output = ''
+    for(let i = 0 ; i < input.length ; i++){
+        output += ' '
+        output += input[i] 
+    }
+    console.log(output)
+    let count = output.split(' ')
+    console.log(count)
+    count.reverse()
+    let garalt = ''
+    for(let k = 0 ; k < count.length - 1 ; k++){
+        garalt += count[k]
+    }
+    Number(garalt)
+    console.log(garalt)
+
+</script>
