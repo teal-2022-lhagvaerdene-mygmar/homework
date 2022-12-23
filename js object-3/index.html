@@ -1,0 +1,81 @@
+<script>
+    let tealStudents = [
+        {
+            name : 'Lkhagva-Erdene' ,
+            birthofYear : 2004,
+            hobby : 'basketball',
+            single : true ,
+            butsaalt : students(),
+            agecalculate : age()
+        },
+        {
+            name : 'Namuun' ,
+            birthofYear : 1997,
+            hobby : 'code write',
+            single : false ,
+            butsaalt : students(),
+            agecalculate : age()
+        },
+        {
+            name : 'Oyu-Erdene' ,
+            birthofYear : 2004,
+            hobby : 'code write',
+            single : false ,
+            butsaalt : students(),
+            agecalculate : age()
+        },
+        {
+            name : 'Enkhnairamdal' ,
+            birthofYear : 2003,
+            hobby : 'basketball',
+            single : true ,
+            butsaalt : students(),
+            agecalculate : age()
+        },
+        {
+            name : 'Monkhhuslen' ,
+            birthofYear : 2003,
+            hobby : 'basketball',
+            single : true ,
+            butsaalt : students(),
+            agecalculate : age()
+        },
+        {
+            name : 'Amartuvshin' ,
+            birthofYear : 2000,
+            hobby : 'basketball',
+            single :false ,
+            butsaalt : students(),
+            agecalculate : age()
+        },
+        {
+            name : 'Nyambaatar' ,
+            birthofYear : 1991,
+            hobby : 'basketball',
+            single : false ,
+            butsaalt : students(),
+            agecalculate : age()
+        },
+    ]
+    function students(){
+        return function(){
+            if(this.birthofYear <= 2002){
+                console.log('20 oos deesh nastai ',this.name)
+            }
+            if(this.single = true){
+                console.log('single person' , this.name)
+            }
+        }
+    }
+    function age(){
+        return function(){
+            let c 
+            c = 2022 - this.birthofYear
+            console.log(this.name , c)
+        }
+    }
+    for(let i = 0 ; i < tealStudents.length ; i++){
+        tealStudents[i].butsaalt()
+        tealStudents[i].agecalculate()
+    }
+</script>

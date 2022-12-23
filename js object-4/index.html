@@ -1,0 +1,77 @@
+<script>
+    let tealStudents = [
+        {
+            name : 'Lkhagva-Erdene',
+            age : 18 ,
+            gender : 'male',
+            genderButsaah : genderType(),
+        },
+        {
+            name : 'Namuun',
+            age : 25 ,
+            gender : 'female',
+            genderButsaah : genderType(),
+        },
+        {
+            name : 'Oyu-Erdene',
+            age : 18 ,
+            gender : 'female',
+            genderButsaah : genderType(),
+        },
+        {
+            name : 'Enkhnairamdal',
+            age : 19 ,
+            gender : 'male',
+            genderButsaah : genderType(),
+        },
+        {
+            name : 'Monkhhuslen',
+            age : 19 ,
+            gender : 'male',
+            genderButsaah : genderType(),
+        },
+        {
+            name : 'Amartuvshin',
+            age : 22 ,
+            gender : 'male',
+            genderButsaah : genderType(),
+        },
+        {
+            name : 'Nyambaatar',
+            age : 18 ,
+            gender : 'male',
+            genderButsaah : genderType(),
+        },
+        {
+            name : 'Tsagaan',
+            age : 28 ,
+            gender : 'male',
+            genderButsaah : genderType(),
+        },
+    ]
+    let k = 0
+    let j = 0
+    function genderType(){
+        return function(){
+            if(this.gender == 'male'){
+                k++
+                console.log('total male' , k)
+            }else{
+                j++
+                console.log('total female' , j)
+            }
+            
+        }
+    }
+    
+    let a = 0
+    for(let i = 0 ; i < tealStudents.length ; i++){
+            a += tealStudents[i].age
+            tealStudents[i].genderButsaah()
+            tealStudents[i].ovog = 'Chingges Khaan'
+            console.log(tealStudents[i].ovog)
+    }
+    console.log( 'dundaj nas',a / tealStudents.length)
+  
+    console.log(tealStudents)
+</script>
