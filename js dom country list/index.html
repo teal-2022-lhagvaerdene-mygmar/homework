@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<body>
+    <style>
+        h4{
+            font-size: 16px;
+            color: rgb(115, 118, 121);
+        }
+        #card{
+         
+            gap: 40px;
+        }
+        
+    </style>
+    <h1>Country list</h1>
+    <input  type="search" placeholder="search" id="search" onkeyup="" />
+    <button type="button" onclick="search()">search</button>
+    <form>
+        <label for="country">Choose a country:</label>
+        <select name="country" id="country">
+            <option value="All">All</option>
+            <option value="Europe">Europe</option>
+            <option value="Asia">Asia</option>
+            <option value="South America">South America</option>
+            <option value="Africa">Africa</option>
+            <option value="North America">North America</option>
+            <option value="South America">South America</option>
+            <option value="Oceania">Oceania</option>
+        </select>
+    </form>
+    <div id="card">
+    </div>
+
+
+    <script>
+        fetch("https://restcountries.com/v3.1/all")
+        .then((res) => res.json())
+        .then((data) => {
+            const country = data.filter((item, index) => index < 40)
+            console.log(country)
+            const countryList = country
+            .map(item =>
+            `<div class="card-d">
+                    <h3> ${item.name.common } ${item.flag}</h3>
+                     <h4> continents:  ${item.continents} </h4>
+                     <h4> Population:  ${item.population} </h4>
+                     <h4> Area:  ${item.area} km*km </h4>
+                     
+                </div>`
+                )
+                .join('')
+            document.getElementById('card').innerHTML = countryList
+        })
+    </script>
+</body>
