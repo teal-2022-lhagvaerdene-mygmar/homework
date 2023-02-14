@@ -1,0 +1,13 @@
+<p>javascipt setTimeout Demo  </p>
+<button onclick="showAlert()">show</button>
+<button onclick="cancelAlert()">cancel</button>
+<script>
+ let timeoutID
+ function showAlert(){
+    timeoutID= setTimeout(alert, 3000 , 'setTimeout demo')
+    console.log('hi')
+ }
+ function cancelAlert(){
+    clearTimeout(timeoutID)
+ }
+</script>
