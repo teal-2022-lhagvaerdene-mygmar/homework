@@ -26,8 +26,7 @@
     <body>
         <header>
             <h1>Product list</h1>
-            <input type="search" placeholder="search" id="search" onkeyup="" />
-            <button type="button" onclick="search()">search</button>
+            <input type="search" placeholder="search" id="search" onkeyup="search()" />
             <div id="card">
             </div>
         </header>
@@ -49,9 +48,20 @@
                 .join('')
                 document.getElementById('card').innerHTML = productList
             })
-            function search(){
-                
-            }
+            function search() {
+                    const input = document.getElementById("search");
+                    const filter = input.value.toUpperCase();
+                    const name = document.getElementsByClassName('card-d')
+                    for (i = 0; i < name.length; i++) {
+                        a = name[i].getElementsByTagName("h3")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            name[i].style.display = "";
+                        } else {
+                            name[i].style.display = "none";
+                        }
+                    }
+                }
         </script>
     </body>
 </html>
