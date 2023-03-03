@@ -12,20 +12,10 @@
         
     </style>
     <h1>Country list</h1>
-    <input  type="search" placeholder="search" id="search" onkeyup="" />
-    <button type="button" onclick="search()">search</button>
+    <input  type="text" placeholder="search is country" id="search" onkeyup="search()"/>
+   
     <form>
         <label for="country">Choose a country:</label>
-        <select name="country" id="country">
-            <option value="All">All</option>
-            <option value="Europe">Europe</option>
-            <option value="Asia">Asia</option>
-            <option value="South America">South America</option>
-            <option value="Africa">Africa</option>
-            <option value="North America">North America</option>
-            <option value="South America">South America</option>
-            <option value="Oceania">Oceania</option>
-        </select>
     </form>
     <div id="card">
     </div>
@@ -35,9 +25,9 @@
         fetch("https://restcountries.com/v3.1/all")
         .then((res) => res.json())
         .then((data) => {
-            const country = data.filter((item, index) => index < 40)
+            const country = data.filter((item, index) => index < 100)
             console.log(country)
-            const countryList = country
+            const  countryList = country
             .map(item =>
             `<div class="card-d">
                     <h3> ${item.name.common } ${item.flag}</h3>
@@ -49,6 +39,22 @@
                 )
                 .join('')
             document.getElementById('card').innerHTML = countryList
-        })
+        }
+        
+        )
+        function search(){
+        const input = document.getElementById("search");
+        const filter = input.value.toUpperCase();
+        const name = document.getElementsByClassName('card-d')
+        for (i = 0; i < name.length; i++) {
+            a = name[i].getElementsByTagName("h3")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                name[i].style.display = "";
+            } else {
+                name[i].style.display = "none";
+            }
+        }
+    }
     </script>
 </body>
