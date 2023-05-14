@@ -1,0 +1,104 @@
+<script>
+    
+
+        const users = [
+            {
+                name: 'Alex',
+    email: 'alex@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript'],
+                age: 45,
+                isLoggedIn: false,
+                points: 30
+            },
+            {
+                name: 'Job',
+    email: 'job@job.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+                age: 25,
+                isLoggedIn: false,
+                points: 50
+            },
+            {
+                name: 'Brook',
+    email: 'daniel@daniel.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+                age: 39,
+                isLoggedIn: true,
+                points: 50
+            },
+            {
+                name: 'Daniel',
+    email: 'daniel@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+                age: 25,
+                isLoggedIn: false,
+                points: 40
+            },
+            {
+                name: 'John',
+    email: 'john@john.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+                age: 20,
+                isLoggedIn: true,
+                points: 50
+            },
+            {
+                name: 'Thomas',
+    email: 'thomas@thomas.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+                age: 18,
+                isLoggedIn: false,
+                points: 40
+            },
+            {
+                name: 'Paul',
+    email: 'paul@paul.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+                age: 25,
+                isLoggedIn: false,
+                points: 40
+            }
+        ]
+ console.log(users[0] )
+
+    let maxSkillsUsers ;
+    let maxSkillsLength = 0;
+
+
+    let L = 0
+    let point = 0
+    let mern = []
+
+    for (let i = 0; i < users.length; i++) {
+        if (users[i].skills.length > maxSkillsLength) {
+            maxSkillsLength = users[i].skills.length;
+            maxSkillsUsers = users[i];
+        }
+        if(users[i].isLoggedIn === true){
+            L++
+        }
+        if(users[i].points >= 50){
+            point++
+        }
+        if(users[i].skills.includes("MongoDB" , "Express" , "React" , "Node") ){
+            mern.push(users[i])
+        }
+   
+    }
+
+    console.log(maxSkillsUsers , "max skillist person");
+    console.log("inlogged users count" , L)
+    console.log("50 points users" , point)
+    console.log( "mern stack developer", mern)
+
+    const maxAge = [];
+    const sortedUsers = users.slice().sort((a, b) => b.age - a.age);
+
+    for (let i = 0; i < Math.min(3, sortedUsers.length); i++) {
+        maxAge.push(sortedUsers[i]);
+    }
+
+     console.log( " max age users ", maxAge);
+
+
+</script>`

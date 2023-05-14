@@ -26,7 +26,7 @@
         },
         {
             name : 'Monkhhuslen',
-            age : 19 ,
+            age : 10 ,
             gender : 'male',
             genderButsaah : genderType(),
         },
@@ -38,7 +38,7 @@
         },
         {
             name : 'Nyambaatar',
-            age : 18 ,
+            age : 30 ,
             gender : 'male',
             genderButsaah : genderType(),
         },
@@ -55,14 +55,16 @@
         return function(){
             if(this.gender == 'male'){
                 k++
-                console.log('total male' , k)
+                console.log('total male', k)
+
             }else{
                 j++
                 console.log('total female' , j)
             }
-            
+
         }
     }
+
     
     let a = 0
     for(let i = 0 ; i < tealStudents.length ; i++){
@@ -74,4 +76,16 @@
     console.log( 'dundaj nas',a / tealStudents.length)
   
     console.log(tealStudents)
+   let ageEqual = [];
+    console.log( "jo");
+    for (let i = 0; i < tealStudents.length; i++) {
+        for (let o = i + 1; o < tealStudents.length; o++) {
+            if (tealStudents[i].age == tealStudents[o].age && tealStudents[i].name !== tealStudents[o].name) {
+                ageEqual.push(tealStudents[i]);
+                ageEqual.push(tealStudents[o]);
+            }
+        }
+    }
+    console.log(ageEqual , "age equal new array");
+
 </script>
